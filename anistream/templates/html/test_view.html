@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeFlix - Watch Anime Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        crunchy: {
+                            orange: '#f47521',
+                            dark: '#121f2b',
+                            darker: '#0a1017',
+                            light: '#f2f5f7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(to right, rgba(18, 31, 43, 0.9) 0%, rgba(18, 31, 43, 0.6) 100%), url('https://via.placeholder.com/1920x600') center/cover no-repeat;
+        }
+        .anime-card:hover .anime-title {
+            color: #f47521;
+        }
+    </style>
+</head>
+<body class="bg-crunchy-darker text-crunchy-light font-sans">
+    <!-- Navigation -->
+    <nav class="bg-crunchy-dark shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-3">
+                <div class="flex items-center space-x-10">
+                    <a href="#" class="text-2xl font-bold text-crunchy-orange">ANIMEFLIX</a>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="#" class="hover:text-crunchy-orange">Browse</a>
+                        <a href="#" class="hover:text-crunchy-orange">Manga</a>
+                        <a href="#" class="hover:text-crunchy-orange">News</a>
+                        <a href="#" class="hover:text-crunchy-orange">Games</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative hidden md:block">
+                        <input type="text" placeholder="Search anime..." class="bg-crunchy-darker text-sm rounded px-4 py-1 focus:outline-none focus:ring-2 focus:ring-crunchy-orange w-64">
+                        <i class="fas fa-search absolute right-3 top-2 text-gray-400"></i>
+                    </div>
+                    <button class="bg-crunchy-orange hover:bg-orange-600 text-white px-4 py-1 rounded text-sm font-medium">Log In</button>
+                    <button class="bg-crunchy-orange hover:bg-orange-600 text-white px-4 py-1 rounded text-sm font-medium">Free Trial</button>
+                    <button class="md:hidden">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-96 flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Attack on Titan: Final Season</h1>
+                <p class="text-lg mb-6">The war for Paradis zeroes in on Shiganshina just as Jaegerists have seized control. The fate of the world hangs in the balance as Eren pushes forward with his plan.</p>
+                <div class="flex space-x-4">
+                    <button class="bg-crunchy-orange hover:bg-orange-600 text-white px-6 py-2 rounded font-medium flex items-center">
+                        <i class="fas fa-play mr-2"></i> Watch Now
+                    </button>
+                    <button class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-2 rounded font-medium flex items-center">
+                        <i class="far fa-plus mr-2"></i> My List
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Popular section -->
+        <section class="mb-10">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Popular This Season</h2>
+                <a href="#" class="text-crunchy-orange hover:underline text-sm">View All</a>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Anime Card 1 -->
+                <div class="anime-card">
+                    <div class="relative pb-[140%] overflow-hidden rounded">
+                        <img src="https://via.placeholder.com/210x300" alt="Anime" class="absolute h-full w-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2">
+                            <div class="flex justify-between items-end">
+                                <span class="text-white text-sm font-medium">EP 12</span>
+                                <span class="text-white text-xs bg-crunchy-orange px-1 rounded">SUB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="anime-title text-sm mt-2 font-medium hover:text-crunchy-orange cursor-pointer">Jujutsu Kaisen Season 2</h3>
+                </div>
+                
+                <!-- Anime Card 2 -->
+                <div class="anime-card">
+                    <div class="relative pb-[140%] overflow-hidden rounded">
+                        <img src="https://via.placeholder.com/210x300" alt="Anime" class="absolute h-full w-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2">
+                            <div class="flex justify-between items-end">
+                                <span class="text-white text-sm font-medium">EP 24</span>
+                                <span class="text-white text-xs bg-crunchy-orange px-1 rounded">DUB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="anime-title text-sm mt-2 font-medium hover:text-crunchy-orange cursor-pointer">Demon Slayer</h3>
+                </div>
+                
+                <!-- More anime cards... -->
+                <!-- Anime Card 3 -->
+                <div class="anime-card">
+                    <div class="relative pb-[140%] overflow-hidden rounded">
+                        <img src="https://via.placeholder.com/210x300" alt="Anime" class="absolute h-full w-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2">
+                            <div class="flex justify-between items-end">
+                                <span class="text-white text-sm font-medium">EP 8</span>
+                                <span class="text-white text-xs bg-crunchy-orange px-1 rounded">SUB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="anime-title text-sm mt-2 font-medium hover:text-crunchy-orange cursor-pointer">Chainsaw Man</h3>
+                </div>
+                
+                <!-- Anime Card 4 -->
+                <div class="anime-card">
+                    <div class="relative pb-[140%] overflow-hidden rounded">
+                        <img src="https://via.placeholder.com/210x300" alt="Anime" class="absolute h-full w-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2">
+                            <div class="flex justify-between items-end">
+                                <span class="text-white text-sm font-medium">EP 15</span>
+                                <span class="text-white text-xs bg-blue-500 px-1 rounded">NEW</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="anime-title text-sm mt-2 font-medium hover:text-crunchy-orange cursor-pointer">My Hero Academia S6</h3>
+                </div>
+                
+                <!-- Anime Card 5 -->
+                <div class="anime-card">
+                    <div class="relative pb-[140%] overflow-hidden rounded">
+                        <img src="https://via.placeholder.com/210x300" alt="Anime" class="absolute h-full w-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2">
+                            <div class="flex justify-between items-end">
+                                <span class="text-white text-sm font-medium">EP 10</span>
+                                <span class="text-white text-xs bg-crunchy-orange px-1 rounded">SUB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="anime-title text-sm mt-2 font-medium hover:text-crunchy-orange cursor-pointer">Spy x Family Part 2</h3>
+                </div>
+                
+                <!-- Anime Card 6 -->
+                <div class="anime-card">
+                    <div class="relative pb-[140%] overflow-hidden rounded">
+                        <img src="https://via.placeholder.com/210x300" alt="Anime" class="absolute h-full w-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2">
+                            <div class="flex justify-between items-end">
+                                <span class="text-white text-sm font-medium">EP 5</span>
+                                <span class="text-white text-xs bg-crunchy-orange px-1 rounded">SUB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="anime-title text-sm mt-2 font-medium hover:text-crunchy-orange cursor-pointer">Blue Lock</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulcast section -->
+        <section class="mb-10">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">New Simulcasts</h2>
+                <a href="#" class="text-crunchy-orange hover:underline text-sm">View All</a>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Simulcast cards would go here similar to above -->
+                <!-- Placeholder for 6 cards -->
+                <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500">Simulcast 1</div>
+                <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500">Simulcast 2</div>
+                <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500">Simulcast 3</div>
+                <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500">Simulcast 4</div>
+                <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500">Simulcast 5</div>
+                <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500">Simulcast 6</div>
+            </div>
+        </section>
+
+        <!-- Continue Watching section -->
+        <section class="mb-10">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Continue Watching</h2>
+                <a href="#" class="text-crunchy-orange hover:underline text-sm">View All</a>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Continue watching cards would go here -->
+                <!-- Placeholder for 6 cards -->
+                <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500">Continue 1</div>
+                <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500">Continue 2</div>
+                <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500">Continue 3</div>
+                <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500">Continue 4</div>
+                <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500">Continue 5</div>
+                <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500">Continue 6</div>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Latest Episode</h2>
+                <a href="#" class="text-crunchy-orange hover:underline text-sm">View All</a>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Continue watching cards would go here -->
+                <!-- Placeholder for 6 cards -->
+                {% for entry in schedule_anime %}
+                <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500 bg-[url({{entry.image}})]">{{entry.title}}</div>
+                {% endfor %}
+                {% comment %} <div class="bg-crunchy-dark rounded h-64 flex items-center justify-center text-gray-500">Continue 6</div> {% endcomment %}
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-crunchy-dark py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Browse</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Popular</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Simulcasts</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Manga</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Games</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Features</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Premium</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Free Trial</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Gift Membership</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Devices</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Help/FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © 2023 AnimeFlix, Inc. All rights reserved.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
