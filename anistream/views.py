@@ -1,8 +1,10 @@
+import logging
+
 import feedparser
 from django.shortcuts import render
 from django.views import View
 
-# Create your views here.
+log = logging.getLogger(__name__)
 
 
 def test_view(request):
@@ -37,3 +39,16 @@ class Spotlight(View):
         return render(
             request, "html/test_view.html", {"schedule_anime": schedule_anime}
         )
+
+
+class episode_page(View):
+    def dispatch(self, request, *args, **kwargs):
+        if request.method == "GET":
+            response = self.episode_page(request)
+        elif request.method == "OPTIONS":
+            self.http_method_names = ["get", "options"]
+            response = self.options()
+        return response
+
+    def episode_page(self, request):
+        return render(request, "html/episode_page.html")
