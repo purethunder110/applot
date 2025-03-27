@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # plugins
+    "django_celery_beat",
     # installed apps
     "core",
     "anistream",
@@ -151,4 +153,13 @@ LOGGING = {
         "handlers": ["console"],
         "level": "INFO",
     },
+}
+
+# Caching Configuration
+
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379",
+    }
 }
