@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+from kombu import Queue
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -160,6 +162,26 @@ LOGGING = {
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.redis.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379",
+        "LOCATION": "redis://redis:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
     }
 }
+
+# Celery Configuration
+
+CELERY_BROKER_URL = "amqp://user:password@rabbitmq:5672//"
+CELERY_RESULT_BACKEND = "redis://redis:6379/0"
+
+
+CELERY_QUEUES = (
+    Queue("default", routing_key="task.#"),
+    Queue("beat", routing_key="beat.#"),
+)
+
+# # Example task routing:
+# CELERY_ROUTES = {
+#     'myproject.tasks.beat_task': {'queue': 'beat', 'routing_key': 'beat.task'},
+#     # All other tasks will default to the "default" queue.
+# }

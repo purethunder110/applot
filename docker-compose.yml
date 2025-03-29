@@ -1,0 +1,55 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    container_name: django_web
+    volumes:
+      - .:/app  # Mount local code for hot-reloading
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+    depends_on:
+      - rabbitmq
+      - redis
+    command: python manage.py runserver 0.0.0.0:8000
+
+  celery_worker:
+    build: .
+    container_name: celery_worker
+    volumes:
+      - .:/app
+    environment:
+      - DEBUG=1
+    depends_on:
+      - rabbitmq
+      - redis
+    command: celery -A applot worker --queues=default -l info
+
+  celery_beat:
+    build: .
+    container_name: celery_beat
+    volumes:
+      - .:/app
+    environment:
+      - DEBUG=1
+    depends_on:
+      - rabbitmq
+      - redis
+    command: celery -A applot beat -l info
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"   # AMQP protocol
+      - "15672:15672" # Management UI
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=password
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    ports:
+      - "6379:6379"

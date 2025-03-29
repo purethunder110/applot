@@ -11,3 +11,8 @@ wheels/
 
 # Redis file
 dump.rdb
+
+# docker rabbitmq files
+celerybeat-schedule
+celerybeat-schedule-shm
+celerybeat-schedule-wal
