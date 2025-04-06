@@ -45,7 +45,7 @@ class WebhookView(View):
             return HttpResponse(status=404)
         return JsonResponse(response)
 
-    def telegram_webhook(request):
+    def telegram_webhook(self, request):
         log.info(f"webhook data | {request}")
         telegram_bot = get_telegram_bot_instance()
         get_updates = telegram_bot.get_bot_update()
