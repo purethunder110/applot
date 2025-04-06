@@ -1,4 +1,4 @@
-FROM Ubuntu
+FROM ubuntu:latest
 
 # install staging changes
 
