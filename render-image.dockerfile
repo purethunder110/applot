@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y \
     git \
     redis \
     python3 \
-    python3-pip
+    python3-pip \
+    python3.12-venv
 
 
 #main django file directory
