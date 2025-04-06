@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 from kombu import Queue
@@ -29,6 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+WEBSITE_BASE_URL = os.getenv("WEBSITE_BASE_URL")
 
 # Application definition
 
