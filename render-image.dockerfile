@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
     git \
     redis \
     python3.12 \
-    python-pip
+    python3-pip
 
 
 #main django deployement
