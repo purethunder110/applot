@@ -1,6 +1,8 @@
 import logging
 
 import feedparser
+import requests
+from django.http import JsonResponse
 from django.shortcuts import render
 from django.views import View
 
@@ -52,3 +54,26 @@ class episode_page(View):
 
     def episode_page(self, request):
         return render(request, "html/episode_page.html")
+
+
+class searchPage(View):
+    def __init__(self, **kwargs):
+        self.anilist_graphql_url = "https://graphql.anilist.co"
+
+    def dispatch(self, request, search_term=None):
+        if request.method == "GET":
+            return render(request, "html/search_page.html")
+        elif request.method == "POST":
+            response = self.search(request, search_term)
+            return JsonResponse(response)
+
+    def search(self, request, search_term):
+        query = """query searchquery($PageNo:Int,$PerPageNo:Int,$SearchKey:String)
+                {Page(page:$PageNo,perPage:$PerPageNo){pageInfo{total currentPage hasNextPage}
+                media(search:$SearchKey,sort:[SEARCH_MATCH],type: ANIME)
+                {id idMal episodes bannerImage title{english romaji}genres coverImage{extraLarge}airingSchedule{edges{node{episode airingAt}}}}}}"""
+        variables = {"PageNo": 1, "PerPageNo": 20, "SearchKey": search_term}
+        search_response = requests.post(
+            self.anilist_graphql_url, json={"query": query, "variables": variables}
+        )
+        return search_response.json()

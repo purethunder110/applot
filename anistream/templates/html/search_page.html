@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Streaming Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        .sidebar-item {
+            @apply py-2 px-4 hover:bg-gray-700 rounded cursor-pointer;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 flex">
+        <!-- Sidebar -->
+        <div class="w-64 pr-8">
+            <div class="mb-8">
+                <div class="relative">
+                    <input type="text" placeholder="Search" class="w-full bg-gray-800 rounded-lg py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="space-y-1">
+                <h3 class="text-lg font-semibold mb-2">Genres</h3>
+                <div class="sidebar-item">Action</div>
+                <div class="sidebar-item">Adventure</div>
+                <div class="sidebar-item">Comedy</div>
+                <div class="sidebar-item">Drama</div>
+                <div class="sidebar-item">Fantasy</div>
+            </div>
+            
+            <div class="mt-6 space-y-1">
+                <h3 class="text-lg font-semibold mb-2">Year</h3>
+                <div class="sidebar-item">2023</div>
+                <div class="sidebar-item">2022</div>
+                <div class="sidebar-item">2021</div>
+            </div>
+            
+            <div class="mt-6 space-y-1">
+                <h3 class="text-lg font-semibold mb-2">Season</h3>
+                <div class="sidebar-item">Winter</div>
+                <div class="sidebar-item">Spring</div>
+                <div class="sidebar-item">Summer</div>
+                <div class="sidebar-item">Fall</div>
+            </div>
+            
+            <div class="mt-6 space-y-1">
+                <h3 class="text-lg font-semibold mb-2">Format</h3>
+                <div class="sidebar-item">TV</div>
+                <div class="sidebar-item">Movie</div>
+                <div class="sidebar-item">OVA</div>
+            </div>
+            
+            <div class="mt-6 space-y-1">
+                <h3 class="text-lg font-semibold mb-2">Airing Status</h3>
+                <div class="sidebar-item">Airing</div>
+                <div class="sidebar-item">Completed</div>
+                <div class="sidebar-item">Upcoming</div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1">
+            <h2 class="text-2xl font-bold mb-6">TRENDING NOW</h2>
+            
+            <div class="grid grid-cols-2 gap-6 mb-12">
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="h-48 bg-purple-600"></div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">ONE PIECE</h3>
+                        <p class="text-gray-400 text-sm">Shamp! for no recommended!</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="h-48 bg-blue-600"></div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Kidney Smith!</h3>
+                        <p class="text-gray-400 text-sm">Canadian Glossomcard!</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="h-48 bg-green-600"></div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">One select event</h3>
+                        <p class="text-gray-400 text-sm">to put new Scanner 2 - which comes like...</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="h-48 bg-red-600"></div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">To Blain Yingdream &</h3>
+                        <p class="text-gray-400 text-sm">Vijitalisie blola on New Academic LLC/GAU</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="text-2xl font-bold mb-6">POPULAR THIS SEASON</h2>
+            
+            <div class="grid grid-cols-3 gap-6">
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="h-40 bg-yellow-600"></div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Earns no Strutbackes</h3>
+                        <p class="text-gray-400 text-sm">Sam no Show Lazares</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="h-40 bg-pink-600"></div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Samyon no Ouzama, Kidney</h3>
+                        <p class="text-gray-400 text-sm">WHO BREAKER Season 2</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="h-40 bg-indigo-600"></div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Stime Trouble >200-mm,</h3>
+                        <p class="text-gray-400 text-sm">Watch Watch on Janet we Nail we Suny?</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="h-40 bg-teal-600"></div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Spiritual Utah</h3>
+                        <p class="text-gray-400 text-sm">in Level NA...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

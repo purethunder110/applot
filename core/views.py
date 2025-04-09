@@ -29,6 +29,21 @@ class Spotlight(View):
         )
 
 
+class healthCheckup(View):
+    def __init__(self):
+        self.health_checkup_channel_id = "-4754204346"
+
+    def dispatch(self, request):
+        self.health_checkup(request)
+        return HttpResponse(status=200)
+
+    def health_checkup(self, request):
+        telegram_bot = get_telegram_bot_instance()
+        telegram_bot.send_message(
+            self.health_checkup_channel_id, "The state of applot is healthy"
+        )
+
+
 class WebhookView(View):
     def __init__(self):
         self.telegram_base_url = (

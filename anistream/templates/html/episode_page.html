@@ -6,12 +6,14 @@
     <title>ANIMIXPLAY Clone</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.min.js" integrity="sha512-vONptKEoKbP1gaC5UkbYDa9OPr04ur4bxaaqT7DAJxGHB2oogtseCPrl5e5hPFokGYotlGNV4d+GM593ka7iNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.css" integrity="sha512-yexU9hwne3MaLL2PG+YJDhaySS9NWcj6z7MvUDSoMhwNghPgXgcvYgVhfj4FMYpPh1Of7bt8/RK5A0rQ9fPMOw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-gray-900 text-gray-200 font-sans">
     <div class="container mx-auto px-4 py-6 max-w-6xl">
         <!-- Header -->
         <header class="mb-8">
-            <h1 class="text-4xl font-bold text-purple-500 mb-2">ANIMIXPLAY</h1>
+            <h1 class="text-4xl font-bold text-purple-500 mb-2">AnimePlayer</h1>
             <div class="flex items-center justify-between">
                 <h2 class="text-xl font-semibold">EP 19</h2>
                 <button class="bg-purple-600 hover:bg-purple-700 px-4 py-1 rounded">
@@ -24,21 +26,22 @@
         <!-- Main Content -->
         <main>
             <!-- Streaming Options -->
-            <div class="flex space-x-4 mb-8">
+            {% comment %} <div class="flex space-x-4 mb-8">
                 <button class="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg flex-1 text-center">
                     GOGO Stream
                 </button>
                 <button class="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg flex-1 text-center">
                     Change
                 </button>
-            </div>
+            </div> {% endcomment %}
 
             <!-- Video Player Placeholder -->
             <div class="bg-black aspect-video mb-8 flex items-center justify-center">
-                <div class="text-center">
+                {% comment %} <div class="text-center">
                     <i class="fas fa-play-circle text-5xl text-purple-500 mb-2"></i>
                     <p>Video Player</p>
-                </div>
+                </div> {% endcomment %}
+                <video class="player" style="--plyr-color-main: #1ac266;" >...</video>
             </div>
 
             <!-- Anime Title -->
@@ -52,8 +55,20 @@
                     <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">3</button>
                     <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">4</button>
                     <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">5</button>
-                </div>
-                <div class="flex flex-wrap gap-2">
+                    <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">6</button>
+                    <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">7</button>
+                    <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">8</button>
+                    <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">9</button>
+                    <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">10</button>
+                    <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">11</button>
+                    <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">12</button>
+                    <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">13</button>
+                    <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">14</button>
+                    <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">15</button>
+                    <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">16</button>
+                    <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">17</button>
+                {% comment %} </div>
+                <div class="flex flex-wrap gap-2"> {% endcomment %}
                     <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">18</button>
                     <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">19</button>
                     <button class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded">20</button>
